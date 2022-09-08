@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform") version "1.7.20-RC"
-    id("com.android.library") version "7.2.2"
+    // id("com.android.library") version "7.4.0-alpha10"
 }
 
 group = "account.ledger"
@@ -16,11 +16,11 @@ kotlin {
             kotlinOptions.jvmTarget = "1.8"
         }
         withJava()
-        testRuns["test"].executionTask.configure {
-            useJUnitPlatform()
-        }
+        // testRuns["test"].executionTask.configure {
+        //     useJUnitPlatform()
+        // }
     }
-    android()
+    // android()
     js(BOTH) {
         browser {
             commonWebpackConfig {
@@ -58,7 +58,7 @@ kotlin {
         val commonMain by getting
         val nativeMain by creating
         val jvmMain by getting
-        val androidMain by getting
+        // val androidMain by getting
         val jsMain by getting
         val iosMain by creating
         val tvosMain by creating
@@ -83,7 +83,7 @@ kotlin {
         /* Main hierarchy */
         nativeMain.dependsOn(commonMain)
         jvmMain.dependsOn(commonMain)
-        androidMain.dependsOn(commonMain)
+        // androidMain.dependsOn(commonMain)
         jsMain.dependsOn(commonMain)
         iosMain.dependsOn(nativeMain)
         iosX64Main.dependsOn(iosMain)
@@ -113,8 +113,8 @@ kotlin {
         }
         val nativeTest by creating
         val jvmTest by getting
-        val androidTest by getting
-        val jsTest by getting
+        // val androidTest by getting
+        val jsTest by getting 
         val iosTest by creating
         val tvosTest by creating
         val watchosTest by creating
@@ -138,7 +138,7 @@ kotlin {
         /* Test hierarchy */
         nativeTest.dependsOn(commonTest)
         jvmTest.dependsOn(commonTest)
-        androidTest.dependsOn(commonTest)
+        // androidTest.dependsOn(commonTest)
         jsTest.dependsOn(commonTest)
         iosTest.dependsOn(nativeTest)
         iosX64Test.dependsOn(iosTest)
@@ -175,11 +175,11 @@ kotlin {
     }
 }
 
-android {
-    compileSdk = 32
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdk = 14
-        targetSdk = 32
-    }
-}
+// android {
+//     compileSdk = 32
+//     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+//     defaultConfig {
+//         minSdk = 14
+//         targetSdk = 32
+//     }
+// }
