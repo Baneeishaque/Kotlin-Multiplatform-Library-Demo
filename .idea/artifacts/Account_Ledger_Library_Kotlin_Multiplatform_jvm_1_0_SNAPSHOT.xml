@@ -1,8 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Account-Ledger-Library-Kotlin-Multiplatform-jvm-1.0-SNAPSHOT">
     <output-path>$PROJECT_DIR$/build/libs</output-path>
-    <root id="archive" name="Account-Ledger-Library-Kotlin-Multiplatform-jvm-1.0-SNAPSHOT.jar">
-      <element id="module-output" name="Account-Ledger-Library-Kotlin-Multiplatform.jvmMain" />
-    </root>
+    <root id="archive" name="Account-Ledger-Library-Kotlin-Multiplatform-jvm-1.0-SNAPSHOT.jar" />
   </artifact>
 </component>
